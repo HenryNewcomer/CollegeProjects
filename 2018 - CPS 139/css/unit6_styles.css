@@ -1,0 +1,95 @@
+/* Main table properties */
+table, tr, th, td {
+    /* (exterior) border, padding, width */
+    background-color: #d4d9de;
+    border: 2px dashed #bec3ca;
+    border-collapse: collapse;
+    padding: 8px;
+    width: 50%;
+}
+th {
+    border: 2px solid #65778a;
+    background-color: #3b4c5f;
+    color: #cddcec;
+    /* "Raleway" was defined in a stylesheet loaded prior to this one; default to Arial if not available */
+    font-family: "Raleway", Arial, sans-serif;
+    font-size: 16pt;
+    font-weight: bold;
+}
+th.title {
+    background-color: #27394e;
+    color: #f4edc9;
+    font-size: 21pt;
+    padding: 8px 12px;
+}
+
+th.year, td.year { text-align: center; width: 20%; }
+th.name, td.name { text-align: left;  width: 40%; }
+th.country, td.country {  text-align: center; width: 20%; }
+th.category, td.category {  text-align: center; width: 40%; }
+
+/* Override the headers so they're ALL centered */
+th.year, th.name, th.country, th.category { text-align: center; }
+
+/* Sets specific properties for cells */
+td { color: #405266; }
+td.name { font-style: italic; font-weight: bold; }
+td.category { font-style: italic; }
+
+/* For my sources */
+footer p.credit {
+    font-weight: bold;
+    margin-left: 40px;
+}
+
+/* Override the mystyles.css footer for this page */
+footer {
+    font-size: 12pt;
+    font-style: normal;
+    text-align: left;
+}
+
+/* Multi-columned "newspaper" style */
+section.newspaper_style {
+    column-count: 3;
+    column-gap: 40px;
+    -moz-column-count: 3;
+    -moz-column-gap: 40px;
+    -webkit-column-count: 3;
+    -webkit-column-gap: 40px;
+}
+section.newspaper_style h2, section.newspaper_style p.note {
+    column-span: all;
+    -moz-column-span: all;
+    -webkit-column-span: all;
+}
+section.newspaper_style p.note {
+    font-style: italic;
+    font-size: 16pt;
+    text-align: center;
+}
+
+/* Combining semantics with style */
+em { font-style: italic; }
+
+/***********************************************
+ * The following adds some extra creativity... *
+ ***********************************************/
+
+/* I couldn't find any mentioning of shadows within our textbook, but
+   information on text-shadows can be found @ https://www.w3schools.com/cssref/css3_pr_text-shadow.asp */
+th.title { text-shadow: 2px 2px 4px #000000; }
+th.year, th.name, th.country, th.category { text-shadow: 0px 4px 8px #1c2836; }
+
+/* Just like with text, you can add shadows to other types of elements
+   However, this doesn't affect tables when viewed in IE/Edge :(
+   Find out more info on box-shadows @ https://www.w3schools.com/cssref/css3_pr_box-shadow.asp */
+table { box-shadow: 0 4px 14px #1c2836; }
+
+/* When the mouse hovers over a cell, signify the area to the user */
+table td:hover {
+    background-color: #8998a8;
+    /* A slight box-shadow "inside" (using 'inset') instead of outside the element */
+    box-shadow: inset 0 0 8px #abbbcc;
+    color: #d1dce9;
+}

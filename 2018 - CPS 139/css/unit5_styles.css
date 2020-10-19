@@ -1,0 +1,33 @@
+/* Google Fonts (referenced in our textbook) */
+@import url('https://fonts.googleapis.com/css?family=Abel');
+
+/* General anchor properties; pseudoclasses inherit/cascade off these. */
+/* Note that only the first "a" element is required, but the rest
+   are added to meet the homework requirements. */
+a, a:link, a:hover, a:active, a:visited {
+    color: #16b6d3;
+    font-family: "Abel", Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: none;
+}
+a:hover {
+    color: #0a7f94;
+    font-style: italic;
+}
+a:active {
+    color: #064f5c;
+}
+
+/* Only resize and reposition the navigation links. */
+nav a {
+    font-size: 18pt;
+    margin: 0 14px 0 14px;
+}
+
+/* Allows the nav links to be centered horizontally and
+   has the added benefit of wrapping regardless of screen size. */
+nav {
+    width: 100%;
+    text-align: center;
+}

@@ -1,0 +1,31 @@
+/* Google Fonts import (mentioned in our book) */
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+p.answer {
+    color: #3b6189;
+    font-family: Arial, Verdana, sans-serif;
+    font-size: 12pt;
+    font-weight: normal;
+}
+
+h2.question {
+    color: #277d5e;
+    font-family: "Raleway", Arial, Verdana, sans-serif;
+    font-size: 18pt;
+    font-weight: bold;
+}
+
+.rounded_rectangle {
+    background-color: #395e84;
+    border-radius: 0 0 30px 30px;
+    color: #baecb9;
+    font-size: 16pt;
+    line-height: 60px;
+    text-align: center;
+    min-width: 10%;
+    max-width: 20%;
+}
+
+/* Just here to combine semantic intention with appropriate style */
+strong { font-weight: bold; }
+em { font-style: italic; }

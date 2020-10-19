@@ -1,0 +1,29 @@
+/* Unit 2 Stylesheet: Henry Newcomer */
+
+body {
+    color: #000000;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 12pt;
+}
+footer {
+    font-size: small;
+    font-style: italic;
+    text-align: center;
+}
+p { line-height: 14pt; }
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20pt;
+    font-weight: bold;
+    line-height: 16pt;
+}
+img {
+    float: left;
+    padding: 5pt;
+}
+
+.description {
+    color: #cc0099;
+    font-size: 16pt;
+    font-weight: bold;
+}

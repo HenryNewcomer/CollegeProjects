@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Abel|Raleway");
+
+body {
+    background-color: #c8d6e0;
+    background-image: url("../images/bg_main_tile.png");
+    background-repeat: repeat;
+    font-family: "Montserrat", Helvetica, Arial, sans-serif;
+    font-size: 12pt;
+    margin: 0;
+}
+
+/* You know the drill :p */
+a, a:link, a:hover, a:active, a:visited {
+    color: #16b6d3;
+    font-family: "Abel", Helvetica, Arial, sans-serif;
+    font-size: 14pt;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: none;
+}
+a:hover {
+    color: #0a7f94;
+    font-style: italic;
+}
+a:active {
+    color: #064f5c;
+}
+
+/* This wrapper will contain everything within the body and contains the outer-most tile */
+div#outer_wrapper {
+    /* No need for a background color as without this image, it'll still look fine */
+    background-image: url("../images/bg_top_tile.png");
+    background-repeat: repeat-x;
+    text-align: center;
+}
+div#outer_wrapper header#banner {
+    height: 324px;
+}
+
+/* And this wrapper holds the main content area, along with the repeating
+   background tile */
+div#inner_wrapper {
+    background-color: #ffffff;
+    background-image: url("../images/inner_wrapper_bg_tile.jpg");
+    background-repeat: repeat;
+    margin: auto;
+    width: 984px;
+}
+
+/* Basic div positions for the images */
+div.image_align_l { float: left; }
+div.image_align_r { float: right; }
+
+/* Aligns and sizes the captions within the image divs */
+div.image_align_l, div.image_align_r {
+    font-size: small;
+    font-style: italic;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Changes all of the anchor tags within the image div's captions */
+div.image_align_l a, div.image_align_l a:link, div.image_align_l a:hover, div.image_align_l a:active, div.image_align_l a:visited,
+div.image_align_r a, div.image_align_r a:link, div.image_align_r a:hover, div.image_align_r a:active, div.image_align_r a:visited {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+}
+
+/* Forces all paragraphs to default to left alignment */
+p { text-align: left; }
+
+/* The GIF area */
+div.animated {
+    /* I purposely removed the bgcolor for this class */
+    background-image: url("../images/animated.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    font-weight: bold;
+    height: 300px;
+    margin: 40px 0 40px 0;
+    text-align: center;
+    text-decoration: underline;
+    text-shadow: 2px 2px 4px #000000; 
+    width: 100%;
+}
+
+/* Adds an outer glow around the main banner image */
+header#banner img { box-shadow: 0 -2px 4px #ffffff; }
+
+article#digital_art { padding: 10px; }
+article#digital_art header { font-size: 10pt; text-align: center; }
+/* Finishes the rest of the outer glow outside of the content area */
+article { box-shadow: 0 2px 6px #ffffff; margin-bottom: 40px; }
+
+p.source { font-weight: bold; margin-left: 18px; }
+
+/* Fixes the list (the bullet points were outside of its area, initially) and styles it */
+ul.sourced_material {
+    display: block;
+    font-style: italic;
+    list-style-position: inside;
+    text-align: left;
+}
+ul.sourced_material li { padding-bottom: 12px; }
+
+/* Stylize the footer */
+footer p { margin: auto; padding-bottom: 10px; width: 80%; }
+footer hr { border:1px solid #ffffff; box-shadow: 0 -2px 6px #ffffff; width: 90%; }
+
+h2 {
+    color: #526a7b;
+    font-family: "Raleway", Helvetica, Arial, sans-serif;
+    font-size: 32pt;
+    padding-bottom: 20px;
+    text-shadow: 0px 1px 5px #18324b; 
+}
+
+/* Borders around the images? No thank you. */
+img { border: none; }
+
+/* To fix overflowing from an image that's too tall, set its property to 'auto'
+   See more info @ https://www.w3schools.com/css/css_float.asp ("The clearfix Hack") */
+section { margin-top: 20px; overflow: auto; }
+section::after { content: ""; clear: both; display: table; }
+
+/* Combining semantics and style */
+em { font-style: italic; }
