@@ -55,11 +55,12 @@ def printBill(custNum, drinkItem, drinkPrice, entreeItem, entreePrice,
     tax = initialTotal * taxRate
     tip = initialTotal * tipPercent
     total = addAll(initialTotal, tax, tip)
+    outputCustomerID = f"Customer #{custNum}"
     output = f"\
 |*****************************|\n\
-| Dinner Bill |\n\
-| ----------- |\n\
-| Customer # {custNum} |\n\
+{'|' : <2}  {'Dinner Bill' : ^25} {'|' : <2}\n\
+{'|' : <2}  {'-----------' : ^25} {'|' : <2}\n\
+{'|' : <2}  {outputCustomerID : ^25} {'|' : <2}\n\
 |*****************************|\n\
 Drink: {drinkItem} $ {drinkPrice:.2f}\n\
 Entree: {entreeItem} $ {entreePrice:.2f}\n\
